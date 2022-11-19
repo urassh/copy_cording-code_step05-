@@ -1,6 +1,6 @@
 let first_display_number = 1;
 let end_display_number = 8;
-
+let selected_product = 0;
 
 const createList = (ul, list_data) => {
     const GET_LISTS = document.getElementById(ul); 
@@ -10,6 +10,8 @@ const createList = (ul, list_data) => {
     const TITLE_ELEMENT = document.createElement('p');
     const PRICE_ELEMENT = document.createElement('p');
 
+    LIST_ELEMENT.setAttribute("id", products.indexOf(list_data));
+    //遷移するときに区別するためリストインデックスを割り当てる。
     IMG_ELEMENT.setAttribute("src", list_data.image);
     TITLE_ELEMENT.innerHTML = list_data.title;
     PRICE_ELEMENT.innerHTML = list_data.price;
@@ -27,8 +29,6 @@ const displayProduct = (lists, first, end) => {
     }
 };
 
-displayProduct(products, first_display_number, end_display_number);
-
 const changeDisplay = (mode) => {
     console.log("test");
     if (mode == 'view') {
@@ -45,6 +45,9 @@ const destroyChild = (element) => {
         parent.removeChild(parent.lastChild);
     }
 };
+
+displayProduct(products, first_display_number, end_display_number);
+
 // こんなリストをつくる
 // <ul id="product-list">
 //     <li>
