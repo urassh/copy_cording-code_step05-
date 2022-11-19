@@ -20,12 +20,25 @@ jQuery(function() {
             $('#product-list').fadeIn(1800);
         }
     );
-    
-    $('li').click(
-        function(e) {
+
+    $('.product').click(
+        function() {
+            console.log("test");
             let id = $(this).attr('id');
             selected_product = id;
             window.location.href = "../View/product_info.html";
+        }
+    );
+
+    $('.toggle_btn').click(
+        function() {
+            $('.mask').fadeIn();
+        }
+    );
+
+    $('.mask').click(
+        function() {
+            $(this).fadeOut();
         }
     );
 });

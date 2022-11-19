@@ -11,6 +11,7 @@ const createList = (ul, list_data) => {
     const PRICE_ELEMENT = document.createElement('p');
 
     LIST_ELEMENT.setAttribute("id", products.indexOf(list_data));
+    LIST_ELEMENT.setAttribute("class", 'product');
     //遷移するときに区別するためリストインデックスを割り当てる。
     IMG_ELEMENT.setAttribute("src", list_data.image);
     TITLE_ELEMENT.innerHTML = list_data.title;
