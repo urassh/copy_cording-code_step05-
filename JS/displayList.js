@@ -7,17 +7,17 @@ const createList = (ul, list_data) => {
 
     const LIST_ELEMENT = document.createElement('li');
     const IMG_ELEMENT = document.createElement('img');
+    const TITLE_ELEMENT = document.createElement('p');
     const PRICE_ELEMENT = document.createElement('p');
-    const SIZE_ELEMENT = document.createElement('p');
 
     IMG_ELEMENT.setAttribute("src", list_data.image);
+    TITLE_ELEMENT.innerHTML = list_data.title;
     PRICE_ELEMENT.innerHTML = list_data.price;
-    SIZE_ELEMENT.innerHTML = list_data.size;
 
     GET_LISTS.appendChild(LIST_ELEMENT); 
     LIST_ELEMENT.appendChild(IMG_ELEMENT);
+    LIST_ELEMENT.appendChild(TITLE_ELEMENT);
     LIST_ELEMENT.appendChild(PRICE_ELEMENT);
-    LIST_ELEMENT.appendChild(SIZE_ELEMENT);
 };
 
 const displayProduct = (lists, first, end) => {
