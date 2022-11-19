@@ -32,8 +32,13 @@ const displayProduct = (lists, first, end) => {
 const changeDisplay = (mode) => {
     console.log("test");
     if (mode == 'view') {
+        first_display_number = 1;
         end_display_number = 12;
-        console.log("test");
+        destroyChild('product-list');
+        displayProduct(products, first_display_number, end_display_number);
+    } else if (mode == 'secound_page') {
+        first_display_number = 13;
+        end_display_number = 16;
         destroyChild('product-list');
         displayProduct(products, first_display_number, end_display_number);
     }
