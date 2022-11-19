@@ -16,6 +16,10 @@ body {
         z-index: 20;
         background-color: #000;
         opacity: .8;
+        display: none;
+    }
+    .open {
+        display: block;
     }
     .wrapper {
         margin:0 80px;
