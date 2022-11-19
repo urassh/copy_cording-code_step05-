@@ -1,3 +1,7 @@
+let first_display_number = 1;
+let end_display_number = 8;
+
+
 const createList = (ul, list_data) => {
     const GET_LISTS = document.getElementById(ul); 
 
@@ -17,13 +21,22 @@ const createList = (ul, list_data) => {
 };
 
 const displayProduct = (lists, first, end) => {
-    for (let i=first; i<=end; i++) {
+    for (let i=first-1; i<end; i++) {
         createList('product-list', lists[i]);
+        console.log(i);
     }
 };
 
-displayProduct(products, 1, 8);
+displayProduct(products, first_display_number, end_display_number);
 
+const changeDisplay = (mode) => {
+    console.log("test");
+    if (mode == 'view_more') {
+        end_display_number = 12;
+        console.log("test");
+        displayProduct(products, first_display_number, end_display_number);
+    }
+};
 // こんなリストをつくる
 // <ul id="product-list">
 //     <li>
