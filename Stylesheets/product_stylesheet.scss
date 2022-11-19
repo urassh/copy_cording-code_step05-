@@ -74,12 +74,31 @@ body {
                 }
             }
             a {
+                font-size: 14px;
                 opacity: 0.8;
                 padding-bottom: 50px;
             }
         }
     }
-    
+    footer {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+        ul {
+            display: flex;
+            li{
+                a {
+                    text-decoration: none;
+                    padding-right: 20px;
+                }
+            }
+        }
+        p {
+
+        }
+    }
 }
 
 
