@@ -31,10 +31,18 @@ displayProduct(products, first_display_number, end_display_number);
 
 const changeDisplay = (mode) => {
     console.log("test");
-    if (mode == 'view_more') {
+    if (mode == 'view') {
         end_display_number = 12;
         console.log("test");
+        destroyChild('product-list');
         displayProduct(products, first_display_number, end_display_number);
+    }
+};
+
+const destroyChild = (element) => {
+    let parent = document.getElementById(element);
+    while(parent.lastChild){
+        parent.removeChild(parent.lastChild);
     }
 };
 // こんなリストをつくる
