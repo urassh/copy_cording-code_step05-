@@ -1,5 +1,3 @@
-let selected_product = 0;
-
 class List {
     constructor(ul_elements, products_data, first_display_number, end_display_number){
         this.ul = ul_elements;
@@ -59,6 +57,8 @@ class List {
 }
 
 const list = new List('product-list', products, 1, 8);
+
+let selected_product = 0;
 
 list.displayProduct();
 
