@@ -1,7 +1,7 @@
 jQuery(function() {
 	$('#view').click(
         function(){
-            changeDisplay('view');
+            list.changeDisplay('view');
             $(this).text("1");
             $('#secound').fadeIn();
             $(this).css('opacity', '1');
@@ -13,7 +13,7 @@ jQuery(function() {
 
     $('#secound').click(
         function() {
-            changeDisplay("secound_page");
+            list.changeDisplay("secound_page");
             $(this).css('opacity', '1');
             $('#view').css('opacity', '0.5');
             $("#product-list").hide();
@@ -23,10 +23,10 @@ jQuery(function() {
 
     $('.product').click(
         function() {
-            console.log("test");
             let id = $(this).attr('id');
+            console.log(id);
             selected_product = id;
-            window.location.href = "../View/product_info.html";
+            // window.location.href = "../View/product_info.html";
         }
     );
 
