@@ -1,9 +1,9 @@
 class List {
-    constructor(ul_elements, products_data, first_display_number, end_display_number){
+    constructor(ul_elements, products_data){
         this.ul = ul_elements;
         this.data = products_data;
-        this.first = first_display_number;
-        this.end = end_display_number;
+        this.first = 1;
+        this.end = 8;
     }
 
     createList(list_data) {
@@ -16,7 +16,6 @@ class List {
     
         LIST_ELEMENT.setAttribute("id", this.data.indexOf(list_data));
         LIST_ELEMENT.setAttribute("class", 'product');
-        //遷移するときに区別するためリストインデックスを割り当てる。
         IMG_ELEMENT.setAttribute("src", list_data.image);
         TITLE_ELEMENT.innerHTML = list_data.title;
         PRICE_ELEMENT.innerHTML = list_data.price;
@@ -56,7 +55,7 @@ class List {
     }
 }
 
-const list = new List('product-list', products, 1, 8);
+const list = new List('product-list', products);
 
 let selected_product = 0;
 
