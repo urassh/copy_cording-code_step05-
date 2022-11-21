@@ -7,7 +7,7 @@ jQuery(function() {
             $(this).css('opacity', '1');
             $('#secound').css('opacity', '0.5');
             $("#product-list").hide();
-            $('#product-list').fadeIn(1800);
+            $('#product-list').fadeIn(1500);
         }
     );
 
@@ -17,7 +17,7 @@ jQuery(function() {
             $(this).css('opacity', '1');
             $('#view').css('opacity', '0.5');
             $("#product-list").hide();
-            $('#product-list').fadeIn(1800);
+            $('#product-list').fadeIn(1500);
         }
     );
 
