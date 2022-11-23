@@ -53,6 +53,7 @@ jQuery(function() {
                 $('#bottom-bar').css('top','10px');
                 console.log("test-3");
             }
+            menuShow();
         }
     );
 
@@ -64,6 +65,19 @@ jQuery(function() {
             $('#top-bar').css('transform','rotate(0deg)');
             $('#bottom-bar').css('transform','rotate(0deg)');
             $('#bottom-bar').css('top','20px');
+            menuShow();
         }
     );
 });
+
+const menuShow = ()=> {
+    if($('#menu').hasClass("SlideOut")){
+        // スライドメニューが非表示なら表示
+        $('#menu').removeClass('SlideOut');
+        $('#menu').addClass('SlideIN');
+    } else {
+        // スライドメニューがあれば非表示
+        $('#menu').removeClass('SlideIN');
+        $('#menu').addClass('SlideOut');
+    }
+};
